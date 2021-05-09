@@ -1,0 +1,6 @@
+framework module Pods_yes_ {
+  umbrella header "Pods-yes?-umbrella.h"
+
+  export *
+  module * { export * }
+}

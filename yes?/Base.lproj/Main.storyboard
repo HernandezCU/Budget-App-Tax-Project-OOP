@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -329,6 +330,9 @@
                                                         <state key="normal" title="Update Budget">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="update_chart:" destination="VUP-6W-PEt" eventType="touchUpInside" id="1xr-7Y-6PU"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvX-eA-gmp">
                                                         <rect key="frame" x="0.0" y="77" width="200" height="50"/>
@@ -339,6 +343,9 @@
                                                         <state key="normal" title="View Chart">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="n4d-cN-nqr" kind="show" id="FOp-sc-2rE"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -402,6 +409,22 @@
             </objects>
             <point key="canvasLocation" x="1501.5999999999999" y="93.103448275862078"/>
         </scene>
+        <!--Chart-->
+        <scene sceneID="O2L-4b-aZb">
+            <objects>
+                <viewController id="n4d-cN-nqr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DqW-0a-qig">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="b90-dS-2Ad"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chart" largeTitleDisplayMode="always" id="wsh-DK-df4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQy-Nk-9di" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2402" y="71"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RFx-Ea-bpk">
             <objects>
@@ -421,4 +444,9 @@
             <point key="canvasLocation" x="-259.4202898550725" y="71.651785714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

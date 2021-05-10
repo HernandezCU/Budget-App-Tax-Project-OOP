@@ -37,15 +37,7 @@ class DataViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var entertainment_field: UITextField!
     @IBOutlet weak var misc_field: UITextField!
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,7 +46,7 @@ class DataViewController: UIViewController, UITextFieldDelegate {
         var address = ""
         var address2 = ""
         if (ip == ""){
-            address = "http://10.129.33.55:8000/tax/calculate?state="
+            address = "http://192.168.0.2:8000/tax/calculate?state="
             address2 = "&income="
         }
         else{
@@ -69,6 +61,7 @@ class DataViewController: UIViewController, UITextFieldDelegate {
         let f_addy = address+String(state)+address2+String(income)
         style_ui()
         fetchData(from: f_addy)
+        
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.keyboarddismiss))
                     view.addGestureRecognizer(tap)
@@ -107,7 +100,37 @@ class DataViewController: UIViewController, UITextFieldDelegate {
                   view.endEditing(true)
            }
     
+    func animateTextField(textField: UITextField, up: Bool)
+        {
+            let movementDistance:CGFloat = -150
+            let movementDuration: Double = 0.3
 
+            var movement:CGFloat = 0
+            if up
+            {
+                movement = movementDistance
+            }
+            else
+            {
+                movement = -movementDistance
+            }
+            UIView.beginAnimations("animateTextField", context: nil)
+            UIView.setAnimationBeginsFromCurrentState(true)
+            UIView.setAnimationDuration(movementDuration)
+            self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+            UIView.commitAnimations()
+        } //Compatability Check on iPhone 11 Pro, Check smaller phones next
+    
+    func textFieldDidBeginEditing(_ textField: UITextField)
+        {
+            self.animateTextField(textField: textField, up:true)
+        }
+
+    func textFieldDidEndEditing(_ textField: UITextField)
+        {
+            self.animateTextField(textField: textField, up:false)
+        }
+    
     private func fetchData(from url: String){
         URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
             guard let data = data, error == nil else {
@@ -127,10 +150,14 @@ class DataViewController: UIViewController, UITextFieldDelegate {
             print(json.remaining)
             print(json.tax)
             print(json.state)
+            total = json.remaining
+            
+            print("total \(total)")
             DispatchQueue.main.async {
                 self.remaining_income.text = "Remaining: \(String(json.remaining))"
                 self.tax_amount.text = "Tax Amount: \(String(json.tax))"
                 self.state_label.text = "State: \(json.state)"
+
                 
             }
             
@@ -154,5 +181,46 @@ class DataViewController: UIViewController, UITextFieldDelegate {
         Utilities.styleTextField(misc_field)
     }
     
+    
+    @IBAction func update_chart(_ sender: Any) {
+        var new_total = total
+        var txt_fields = [mortgage_field, car_payment_field, k401_field, clothes_field, food_field,
+                          gas_field, emergency_fund_field, investments_field, travel_field,
+                          gifts_field, entertainment_field, misc_field]
+        var to_sub = [Float(0.0)]
+        for x in txt_fields {
+            if (x?.text?.isFloat == true){
+                to_sub.append(Float((x?.text)!)!)
+                print(to_sub)
+            }
+            else{
+                create_alert(NewTitle: "Error", msg: "\(String(describing: x?.text)) is not a Float, Please enter a Float!")
+            }
+        }
+        var t = Float(0.0)
+        for i in to_sub {
+            t += i
+        }
+        
+        create_alert(NewTitle: "Total", msg: "Total: \(t) \n Remaining: \(new_total-t)")
+        
+        
+    }
+    
+    
+    
+    func create_alert(NewTitle: String, msg: String){
+        let alert = UIAlertController(title: NewTitle, message: msg, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    
+    }
 
 }
+extension String {
+    var isFloat: Bool {
+        return Float(self) != nil
+    }
+}
+
+

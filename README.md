@@ -4,9 +4,9 @@
 The TAX CALCULATOR APP is composed of a SWIFT frontend and a Python(FastAPI) backend. The Front end is quite simple as all that is really going on is a simple request to the backend that returns a JSON object that contains the following, 
 ```json 
 {
-"remaining": float(remaining_income),  
-"tax": float(tax_rate),  
-"state": string(state)
+"remaining": remaining_income,  
+"tax": tax_rate,  
+"state": state
 }	
 ```
 From there we create a struct and then decode the JSON object into a struct so we can interpret it in the Swift Language. 

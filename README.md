@@ -31,6 +31,7 @@ These are the main components of the Swift frontend in relation to the Python(Fa
 ## Home Screen (Main Screen)
 
 ![enter image description here](https://i.imgur.com/uAislWe.png)
+
 The purpose of the main screen is to collect essential user data to send to the API. This screen collects the state that the user resides in as well as their monthly income. This ViewController validates the data that is inputted via a series of logic statements. 
 ```swift
 @IBAction func calc(_ sender: Any) {
@@ -58,6 +59,7 @@ else{
 This logic handles all of the user input and makes sure that we are sending the correct type of data to the API to ensure that we get the desired response
 ## Budget Screen
 ![enter image description here](https://i.imgur.com/9QpWuRK.png)![enter image description here](https://i.imgur.com/Udo7aPh.png)
+
 The Budget Creation screen is the first thing the user sees after inputting his State and Income Data into the previous ViewController. Here the user sees the response that the API sent back, the user can view how much money they have left after allocating the correct amount for taxes as well as the state they inputted. 
 The following code is responsible for decoding and formatting the JSON reply object that the API sent back:
 ```swift 
@@ -97,6 +99,7 @@ DispatchQueue.main.async {
 
 ## Chart Screen
 ![enter image description here](https://i.imgur.com/gLhFw5j.png)
+
 The Chart view allows the user to have a visual representation of the budget they created. This chart was created using the [Charts Library](https://github.com/danielgindi/Charts) for Swift. This library allows us to create a great visual for user. This visual contains all the information that they added into the Budget Creation Section of the app and displays it. There is some simple logic involved in creating the chart as we want to avoid any entry that is 0 because if we don't the chart will appear squished. 
 The logic to create the charts is straightforward and contains tons of that Swift magic we all know and love.
 ```swift

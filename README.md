@@ -32,6 +32,7 @@ These are the main components of the Swift frontend in relation to the Python(Fa
 # Screens
 ## Loading Screen (Splash Screen)
 This Screen is mainly used to give the user something to view while the app is loading. This Screen didn't require any coding and was created with simple UI elements such as a label and two ImageViews. 
+
 ![enter image description here](https://i.imgur.com/Q2vWenX.png)
 
 

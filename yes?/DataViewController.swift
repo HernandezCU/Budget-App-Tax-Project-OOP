@@ -8,7 +8,7 @@
 import UIKit
 
 var api_reply: String?
-
+public var chart_data = [Float(0.0)]
 struct Reply: Codable {
     let remaining: Float
     let tax: Float
@@ -191,7 +191,7 @@ class DataViewController: UIViewController, UITextFieldDelegate {
         for x in txt_fields {
             if (x?.text?.isFloat == true){
                 to_sub.append(Float((x?.text)!)!)
-                print(to_sub)
+                //print(to_sub)
             }
             else{
                 create_alert(NewTitle: "Error", msg: "\(String(describing: x?.text)) is not a Float, Please enter a Float!")
@@ -201,6 +201,10 @@ class DataViewController: UIViewController, UITextFieldDelegate {
         for i in to_sub {
             t += i
         }
+        to_sub.remove(at: 0)
+        
+        chart_data = to_sub
+        
         
         create_alert(NewTitle: "Total", msg: "Total: \(t) \n Remaining: \(new_total-t)")
         

@@ -6,7 +6,8 @@ target 'yes?' do
   use_frameworks!
 
   # Pods for yes?
-  pod 'SwiftSoup'
+  pod 'Charts'
+  
 
   target 'yes?Tests' do
     inherit! :search_paths

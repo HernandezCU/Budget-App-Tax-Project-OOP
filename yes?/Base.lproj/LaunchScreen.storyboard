@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +13,64 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAX THINGY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9z-VT-z5f">
+                                <rect key="frame" x="57" y="556" width="261" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="c4x-Nz-GTZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TAXES-cutout" translatesAutoresizingMaskIntoConstraints="NO" id="nUL-Q7-U9U">
+                                <rect key="frame" x="239" y="282" width="120" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="M3R-UF-uNy"/>
+                                    <constraint firstAttribute="height" constant="175" id="PnF-Hm-W7K"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3L-uB-5P9">
+                                <rect key="frame" x="173" y="349" width="29" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CHART-cutout" translatesAutoresizingMaskIntoConstraints="NO" id="XMe-Po-fSH">
+                                <rect key="frame" x="16" y="307" width="125" height="125"/>
+                                <color key="tintColor" red="0.93609631059999998" green="0.45281201599999998" blue="0.3585267365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="T0X-SI-EgG"/>
+                                    <constraint firstAttribute="width" constant="125" id="wbc-R5-lvC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.42519170049999999" green="0.36027172210000002" blue="0.90629488229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D3L-uB-5P9" firstAttribute="centerY" secondItem="nUL-Q7-U9U" secondAttribute="centerY" id="1bS-5G-vAF"/>
+                            <constraint firstItem="D3L-uB-5P9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4DS-CJ-CDr"/>
+                            <constraint firstItem="nUL-Q7-U9U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="238" id="8rP-n3-iV5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v9z-VT-z5f" secondAttribute="bottom" constant="149" id="F0R-oJ-ZNl"/>
+                            <constraint firstItem="nUL-Q7-U9U" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="J0W-Ol-NI4"/>
+                            <constraint firstItem="D3L-uB-5P9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="305" id="JLp-9x-Fsp"/>
+                            <constraint firstItem="XMe-Po-fSH" firstAttribute="centerY" secondItem="D3L-uB-5P9" secondAttribute="centerY" id="Jvx-7c-5YT"/>
+                            <constraint firstItem="D3L-uB-5P9" firstAttribute="centerX" secondItem="v9z-VT-z5f" secondAttribute="centerX" id="d1q-3v-b0U"/>
+                            <constraint firstItem="D3L-uB-5P9" firstAttribute="leading" secondItem="XMe-Po-fSH" secondAttribute="trailing" constant="32" id="mgV-YS-feF"/>
+                            <constraint firstItem="v9z-VT-z5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="ubJ-zq-BMT"/>
+                            <constraint firstItem="XMe-Po-fSH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="vxF-54-h7D"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CHART-cutout" width="330" height="330"/>
+        <image name="TAXES-cutout" width="384" height="585"/>
+    </resources>
 </document>

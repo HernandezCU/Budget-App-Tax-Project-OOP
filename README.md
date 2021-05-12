@@ -1,7 +1,8 @@
+
 # Tax Calculator
 ## OVERVIEW
 
-The TAX CALCULATOR APP is composed of a SWIFT frontend and a Python(FastAPI) backend. The Front end is quite simple as all that is really going on is a simple request to the backend that returns a JSON object that contains the following, 
+The TAX CALCULATOR APP is composed of a SWIFT frontend and a Python(FastAPI) backend. The Front end is quite simple as all that is going on is a simple request to the backend that returns a JSON object that contains the following, 
 ```json 
 {
 "remaining": 1000,  
@@ -26,13 +27,19 @@ self.state_label.text = "State: \(json.state)"
 }
 ```
 These are the main components of the Swift frontend in relation to the Python(FastAPI) backend.
-
+# App Logo
+![enter image description here](https://i.imgur.com/urovqoO.png)
 # Screens
+## Loading Screen (Splash Screen)
+This Screen is mainly used to give the user something to view while the app is loading. This Screen didn't require any coding and was created with simple UI elements such as a label and two ImageViews. 
+![enter image description here](https://i.imgur.com/Q2vWenX.png)
+
+
 ## Home Screen (Main Screen)
 
-![enter image description here](https://i.imgur.com/uAislWe.png)
+![enter image description here](https://i.imgur.com/m9s48mU.png)
 
-The purpose of the main screen is to collect essential user data to send to the API. This screen collects the state that the user resides in as well as their monthly income. This ViewController validates the data that is inputted via a series of logic statements. 
+The purpose of the main screen is to collect essential user data to send to the API. This screen manages the state that the user resides in as well as their monthly income. This ViewController validates the data that is inputted via a series of logic statements.  The following @IBAction is triggered once the `Calculate Taxes` button is clicked. 
 ```swift
 @IBAction func calc(_ sender: Any) {
 
@@ -56,11 +63,11 @@ else{
 }
 }
 ```
-This logic handles all of the user input and makes sure that we are sending the correct type of data to the API to ensure that we get the desired response
+This logic handles all user input and makes sure that we are sending the correct type of data to the API to ensure that we get the desired response.
 ## Budget Screen
-![enter image description here](https://i.imgur.com/9QpWuRK.png)![enter image description here](https://i.imgur.com/Udo7aPh.png)
+![enter image description here](https://i.imgur.com/tNP7R3g.png)![enter image description here](https://i.imgur.com/CjEYYXl.png)
 
-The Budget Creation screen is the first thing the user sees after inputting his State and Income Data into the previous ViewController. Here the user sees the response that the API sent back, the user can view how much money they have left after allocating the correct amount for taxes as well as the state they inputted. 
+The Budget Creation screen is the first thing the user sees after inputting his State and Income Data into the previous ViewController. Here the user visits the response that the API sent back; the user can view how much money they have left after allocating the correct amount for taxes and the state they inputted. 
 The following code is responsible for decoding and formatting the JSON reply object that the API sent back:
 ```swift 
 private func fetchData(from url: String){
@@ -98,9 +105,9 @@ DispatchQueue.main.async {
 ```
 
 ## Chart Screen
-![enter image description here](https://i.imgur.com/gLhFw5j.png)
+![enter image description here](https://i.imgur.com/QmJKgqa.png)
 
-The Chart view allows the user to have a visual representation of the budget they created. This chart was created using the [Charts Library](https://github.com/danielgindi/Charts) for Swift. This library allows us to create a great visual for user. This visual contains all the information that they added into the Budget Creation Section of the app and displays it. There is some simple logic involved in creating the chart as we want to avoid any entry that is 0 because if we don't the chart will appear squished. 
+The Chart view allows the user to have a visual representation of the budget they created. This chart was created using the [Charts Library](https://github.com/danielgindi/Charts) for Swift. This library allows us to create a great visual for the user. This graphic contains all the information they added into the Budget Creation Section of the app and displays it. There is some simple logic involved in creating the chart as we want to avoid any entry that is 0 because if we don't, the graph will appear squished. 
 The logic to create the charts is straightforward and contains tons of that Swift magic we all know and love.
 ```swift
 let  labels = ["Mortgage", "Car Payment", "401K", "Clothes", "Food", "Gas", "Emergency Fund",
@@ -157,6 +164,6 @@ return colors
 
 }
 ```
-The`colorsOfCharts()`function is responsible for creating random colors whenever it is called. This ensures that each element of the Pie Chart is a different color so there is no confusion while reading the chart. 
-
-
+The`colorsOfCharts()` function is responsible for creating random colors whenever it is called. This ensures that each Pie Chart element is different, so there is no confusion while reading the chart. 
+# Conclusion
+In conclusion, this app has several moving parts that need to work in unison to yield the desired results. This final project was fun to create as I had not worked with SWIFT in over a year. Working with swift has many challenges, but once you become familiar with them, it almost becomes second nature to detect them before they happen. For example, we always have to remember to force unwrap values from variables. This is very important because if we don't, the application will freeze and throw an exception. We also have to remember to add constraints to all of our UI elements because if we fail to do so, we will most likely have several UI elements all over the place. Overall this entire experience was great as I had never used swift to make API requests and get data, format it, and then display it. It was an entirely new experience, and I will experiment with it a lot more because the possibilities of this are endless.

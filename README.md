@@ -61,6 +61,7 @@ This Screen is mainly used to give the user something to view while the app is l
 ## Home Screen (Welcome Screen)
 
    ![enter image description here](https://i.imgur.com/KZlJfpF.png)
+   
 The purpose of the main screen is to collect essential user data to send to the API. This screen manages the state that the user resides in as well as their monthly income. This ViewController validates the data that is inputted via a series of logic statements.  The following @IBAction is triggered once the `Calculate Taxes` button is clicked. 
 ```swift
 @IBAction func calc(_ sender: Any) {
@@ -128,6 +129,7 @@ DispatchQueue.main.async {
 
 ## Asset Returns Calculation
 ![enter image description here](https://i.imgur.com/k1Q7np0.png)
+
 The Asset Returns Calculation screen is a simple screen containing a textfield, a label, and a button. This screen simply takes in the users estimated assets (inputted by the user) and displays a simple chart that gives the user a simple way to view the estimated returns that their assets will yield each year. 
 
 ## Budget

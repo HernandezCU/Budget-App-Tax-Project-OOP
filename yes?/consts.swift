@@ -6,6 +6,12 @@
 //
 
 import Foundation
+import UIKit
+
+var ip = "192.168.0.2"
+//"192.168.0.2"
+//10.129.33.55
+var endpoint = ""
 var total: Float = 0.0
 var mortgage_const: Float = 0.0
 var car_payment_const: Float = 0.0
@@ -19,3 +25,6 @@ var travel_const: Float = 0.0
 var gifts_const: Float = 0.0
 var entertainment_const: Float = 0.0
 var miscellanous_const: Float = 0.0
+
+
+

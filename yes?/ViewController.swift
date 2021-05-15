@@ -9,12 +9,11 @@ import UIKit
 
 public var income = 0
 public var state = "empty"
-public var ip = ""
 
 class ViewController: UIViewController, UITextFieldDelegate{
     var states = ["ALABAMA", "ALASKA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "FLORIDA", "GEORGIA", "HAWAII", "IDAHO", "ILLINOIS", "INDIANA", "IOWA","KANSAS", "KENTUCKY", "LOUISIANA", "MAINE", "MARYLAND", "MASSACHUSETTS", "MICHIGAN", "MINNESOTA", "MISSISSIPPI", "MISSOURI", "MONTANA", "NEBRASKA", "NEVADA","NEW HAMPSHIRE","NEW JERSEY", "NEW MEXICO", "NEW YORK", "NORTH CAROLINA", "NORTH DAKOTA", "OHIO", "OKLAHOMA", "OREGON", "PENNSYLVANIA", "RHODE ISLAND", "SOUTH CAROLINA", "SOUTH DAKOTA", "TENNESSEE", "TEXAS", "UTAH", "VERMONT", "VIRGINIA", "WASHINGTON", "WEST VIRGINIA", "WISCONSIN", "WYOMING"]
     
-    var states_abb = ["AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
+    var states_abb = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
                       "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH",
                       "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX",
                       "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
@@ -43,16 +42,16 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         Utilities.styleTextField(monthly_income_field)
         Utilities.styleTextField(state_field)
         Utilities.styleFilledButton(Calculate_btn)
+        
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.keyboarddismiss))
                     view.addGestureRecognizer(tap)
                     monthly_income_field.delegate = self
                     state_field.delegate = self
-        
+    
         
         
         
@@ -99,15 +98,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     
     func create_alert(NewTitle: String, msg: String){
+        
         let alert = UIAlertController(title: NewTitle, message: msg, preferredStyle: UIAlertController.Style.alert)
-
-                              // add an action (button)
-                              alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                              
-
-                              // show the alert
-                              self.present(alert, animated: true, completion: nil)
-    
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     
     }
     

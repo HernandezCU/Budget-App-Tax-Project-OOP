@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		2A7422F24AEA26E9B98F7A9D /* Pods_yes_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EFF0F1DC6CF4348EE7444C /* Pods_yes_.framework */; };
 		60EB53226E0B9AE848B75C3B /* Pods_yes__yes_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55362F69BE67087B5AA97AE8 /* Pods_yes__yes_UITests.framework */; };
+		AE84C238264C66C7003C33BB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE84C237264C66C7003C33BB /* MainViewController.swift */; };
+		AE84C242264C66E7003C33BB /* TaxChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE84C241264C66E7003C33BB /* TaxChartViewController.swift */; };
+		AE84C248264CAE25003C33BB /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE84C247264CAE25003C33BB /* ExternalAccessory.framework */; };
+		AE84C253264D8D87003C33BB /* AssetsDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE84C252264D8D87003C33BB /* AssetsDisplayViewController.swift */; };
 		AE97EC4B2648ABB500055692 /* consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EC4A2648ABB500055692 /* consts.swift */; };
 		AE97EC5A2649BBCA00055692 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97EC592649BBCA00055692 /* ChartViewController.swift */; };
 		AEB16BE8263893BD007E9919 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB16BE7263893BD007E9919 /* Utilities.swift */; };
 		AEB16BF226389B0F007E9919 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB16BF126389B0F007E9919 /* DataViewController.swift */; };
+		AED0D3D1264EF19900A389D8 /* AssetsInputPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED0D3D0264EF19900A389D8 /* AssetsInputPageViewController.swift */; };
 		AEF00F9D25F2CE2C00E7019B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF00F9C25F2CE2C00E7019B /* AppDelegate.swift */; };
 		AEF00F9F25F2CE2C00E7019B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF00F9E25F2CE2C00E7019B /* SceneDelegate.swift */; };
 		AEF00FA125F2CE2C00E7019B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF00FA025F2CE2C00E7019B /* ViewController.swift */; };
@@ -48,10 +53,16 @@
 		4B6DEDCB9C60A7F8CBE7B42C /* Pods-yes?Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yes?Tests.release.xcconfig"; path = "Target Support Files/Pods-yes?Tests/Pods-yes?Tests.release.xcconfig"; sourceTree = "<group>"; };
 		55362F69BE67087B5AA97AE8 /* Pods_yes__yes_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yes__yes_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B649E4C4B34CAD66370FB8 /* Pods_yes_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yes_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE84C237264C66C7003C33BB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AE84C241264C66E7003C33BB /* TaxChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxChartViewController.swift; sourceTree = "<group>"; };
+		AE84C246264CAE24003C33BB /* yes?.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "yes?.entitlements"; sourceTree = "<group>"; };
+		AE84C247264CAE25003C33BB /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		AE84C252264D8D87003C33BB /* AssetsDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsDisplayViewController.swift; sourceTree = "<group>"; };
 		AE97EC4A2648ABB500055692 /* consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consts.swift; sourceTree = "<group>"; };
 		AE97EC592649BBCA00055692 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		AEB16BE7263893BD007E9919 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AEB16BF126389B0F007E9919 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		AED0D3D0264EF19900A389D8 /* AssetsInputPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsInputPageViewController.swift; sourceTree = "<group>"; };
 		AEF00F9925F2CE2C00E7019B /* yes?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yes?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF00F9C25F2CE2C00E7019B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEF00F9E25F2CE2C00E7019B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE84C248264CAE25003C33BB /* ExternalAccessory.framework in Frameworks */,
 				2A7422F24AEA26E9B98F7A9D /* Pods_yes_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +114,7 @@
 		2F29F03EE026B190E56500A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE84C247264CAE25003C33BB /* ExternalAccessory.framework */,
 				37EFF0F1DC6CF4348EE7444C /* Pods_yes_.framework */,
 				55362F69BE67087B5AA97AE8 /* Pods_yes__yes_UITests.framework */,
 				92B649E4C4B34CAD66370FB8 /* Pods_yes_Tests.framework */,
@@ -147,6 +160,7 @@
 		AEF00F9B25F2CE2C00E7019B /* yes? */ = {
 			isa = PBXGroup;
 			children = (
+				AE84C246264CAE24003C33BB /* yes?.entitlements */,
 				AEF00F9C25F2CE2C00E7019B /* AppDelegate.swift */,
 				AEB16BE7263893BD007E9919 /* Utilities.swift */,
 				AEF00F9E25F2CE2C00E7019B /* SceneDelegate.swift */,
@@ -158,6 +172,10 @@
 				AEB16BF126389B0F007E9919 /* DataViewController.swift */,
 				AE97EC4A2648ABB500055692 /* consts.swift */,
 				AE97EC592649BBCA00055692 /* ChartViewController.swift */,
+				AE84C237264C66C7003C33BB /* MainViewController.swift */,
+				AE84C241264C66E7003C33BB /* TaxChartViewController.swift */,
+				AE84C252264D8D87003C33BB /* AssetsDisplayViewController.swift */,
+				AED0D3D0264EF19900A389D8 /* AssetsInputPageViewController.swift */,
 			);
 			path = "yes?";
 			sourceTree = "<group>";
@@ -247,6 +265,9 @@
 		AEF00F9125F2CE2C00E7019B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
@@ -419,12 +440,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF00FA125F2CE2C00E7019B /* ViewController.swift in Sources */,
+				AED0D3D1264EF19900A389D8 /* AssetsInputPageViewController.swift in Sources */,
+				AE84C253264D8D87003C33BB /* AssetsDisplayViewController.swift in Sources */,
+				AE84C242264C66E7003C33BB /* TaxChartViewController.swift in Sources */,
 				AE97EC5A2649BBCA00055692 /* ChartViewController.swift in Sources */,
 				AEF00F9D25F2CE2C00E7019B /* AppDelegate.swift in Sources */,
 				AEB16BE8263893BD007E9919 /* Utilities.swift in Sources */,
 				AEB16BF226389B0F007E9919 /* DataViewController.swift in Sources */,
 				AE97EC4B2648ABB500055692 /* consts.swift in Sources */,
 				AEF00F9F25F2CE2C00E7019B /* SceneDelegate.swift in Sources */,
+				AE84C238264C66C7003C33BB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +626,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "yes?/yes?.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDWC62685W;
 				INFOPLIST_FILE = "yes?/Info.plist";
@@ -622,6 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "yes?/yes?.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDWC62685W;
 				INFOPLIST_FILE = "yes?/Info.plist";

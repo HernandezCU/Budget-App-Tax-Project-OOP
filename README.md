@@ -16,6 +16,7 @@ The TAX CALCULATOR APP is composed of a SWIFT frontend and a Python(FastAPI) bac
 "amount_invested": 1200.00,
 "return_per_month": 12.00,
 "return_per_year": 120.00
+}
 ```
 From there we create a struct and then decode the JSON object into a struct so we can interpret it in the Swift Language. 
 ```swift

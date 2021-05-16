@@ -1,6 +1,18 @@
 
 
+
 # Tax Calculator
+## SET UP
+In order to run this app the following must be true
+
+ - You must first be running the API from [Final](https://github.com/FrankenW1/Final) Python API.
+ 
+ -  When opening the project you must run the `yes?.xcworkspace` to ensure all dependencies can be referenced. 
+ 
+ - You must change the value of the variable `var ip =  "[ENTER LOCAL IP HERE]"` to your own IP address, The Variable is located in `yes?/consts.swift`. 
+ 
+ - Profit ???
+ 
 ## OVERVIEW
 
 The TAX CALCULATOR APP is composed of a SWIFT frontend and a Python(FastAPI) backend. The Front end is quite simple as all that is going on is a simple request to the backend that returns a JSON object that contains the following, 

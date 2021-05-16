@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-var ip = "192.168.0.2"
-//"192.168.0.2"
-//10.129.33.55
+var ip = "[ENTER LOCAL IP HERE]" //Make sure to be running the Python API before hand! 
+//WINDOWS CMD:  ipconfig
+//MAC CMD: ipconfig getifaddr en0
 var endpoint = ""
 var total: Float = 0.0
 var mortgage_const: Float = 0.0
@@ -25,6 +25,3 @@ var travel_const: Float = 0.0
 var gifts_const: Float = 0.0
 var entertainment_const: Float = 0.0
 var miscellanous_const: Float = 0.0
-
-
-
